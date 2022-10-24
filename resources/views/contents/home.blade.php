@@ -38,7 +38,7 @@
                         <div class="col-ml-9">
                             <div class="card-body ml-4">
                                 <p class="card-title">Kelas VII</p>
-                                <h6 class="card-title">12</h6>
+                                <h6 class="card-title">{{$count_siswa_kelas['vii']}}</h6>
                             </div>
                         </div>
                         <div class="col-md-1">
@@ -75,7 +75,7 @@
                         <div class="col-ml-10">
                             <div class="card-body ml-4">
                                 <p class="card-title">Kelas VIII</p>
-                                <h6 class="card-title">10</h6>
+                                <h6 class="card-title">{{$count_siswa_kelas['viii']}}</h6>
                             </div>
                         </div>
                         <div class="col-md-1">
@@ -111,7 +111,7 @@
                         <div class="col-ml-10">
                             <div class="card-body ml-4">
                                 <p class="card-title">Kelas IX</p>
-                                <h6 class="card-title">13</h6>
+                                <h6 class="card-title">{{$count_siswa_kelas['ix']}}</h6>
                             </div>
                         </div>
                         <div class="col-md-1">
@@ -197,7 +197,7 @@
                         <div class="col-ml-10 ml-4">
                             <div class="card-body">
                                 <p class="card-title">TOTAL SISWA</p>
-                                <h6 class="card-title">35</h6>
+                                <h6 class="card-title">{{$count_siswa_kelas['all']}}</h6>
                             </div>
                         </div>
                     </div>
