@@ -14,6 +14,9 @@
                     <li class="breadcrumb-item active" aria-current="page">Nilai</li>
                 </ol>
             </nav>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <button type="button" class="btn btn-success btn-sm mr-2">Cetak Nilai</button>
+            </div>
             <table class="table table-hover" id="dataTables">
                 <thead>
                     <tr>

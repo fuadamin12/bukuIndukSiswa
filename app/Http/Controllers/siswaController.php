@@ -20,7 +20,6 @@ class siswaController extends Controller
         $pekerjaanOrangTua  = $request->pekerjaanOrangTua;
         $alamatOrangTua     = $request->alamatOrangTua;
         $asalSekolah        = $request->asalSekolah;
-        $nomorIjazah        = $request->nomorIjazah;
 
         // proses store
         $siswa                      = new siswa;
@@ -34,7 +33,6 @@ class siswaController extends Controller
         $siswa->pekerjaanOrangTua   = $pekerjaanOrangTua;
         $siswa->alamatOrangTua      = $alamatOrangTua;
         $siswa->asalSekolah         = $asalSekolah;
-        $siswa->nomorIjazah         = $nomorIjazah;
         $siswa->save();
     }
 
@@ -59,7 +57,6 @@ class siswaController extends Controller
         $pekerjaanOrangTua  = $request->pekerjaanOrangTuaEdit;
         $alamatOrangTua     = $request->alamatOrangTuaEdit;
         $asalSekolah        = $request->asalSekolahEdit;
-        $nomorIjazah        = $request->nomorIjazahEdit;
 
         // proses store
         $siswa                      = siswa::find($idSiswa);
@@ -73,7 +70,6 @@ class siswaController extends Controller
         $siswa->pekerjaanOrangTua   = $pekerjaanOrangTua;
         $siswa->alamatOrangTua      = $alamatOrangTua;
         $siswa->asalSekolah         = $asalSekolah;
-        $siswa->nomorIjazah         = $nomorIjazah;
         $siswa->save();
     }
 }

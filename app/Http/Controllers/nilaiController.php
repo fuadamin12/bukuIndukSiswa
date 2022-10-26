@@ -12,7 +12,6 @@ class nilaiController extends Controller
     {
         $nilai = new nilai;
         $nilai->siswa_id        = $request->idSiswa;
-        $nilai->tahunPelajar    = $request->tahunPelajaran;
         $nilai->kelas           = $request->kelas;
         $nilai->semester        = $request->semester;
         $nilai->mataPelajaran   = $request->mataPelajaran;
@@ -26,7 +25,6 @@ class nilaiController extends Controller
         $id = $request->idSiswaUbah;
 
         $nilaiEdit = nilai::find($id);
-        $nilaiEdit->tahunPelajar    = $request->tahunPelajaranUbah;
         $nilaiEdit->kelas           = $request->kelasUbah;
         $nilaiEdit->semester        = $request->semesterUbah;
         $nilaiEdit->mataPelajaran   = $request->mataPelajaranUbah;

@@ -15,6 +15,9 @@
                     <li class="breadcrumb-item active" aria-current="page">Siswa</li>
                 </ol>
             </nav>
+            <div class="d-flex flex-row-reverse bd-highlight">
+                <button type="button" class="btn btn-success btn-sm mr-2">Cetak Siswa</button>
+            </div>
             <table class="table table-hover" id="dataTables">
                 <thead>
                     <tr>
@@ -41,7 +44,7 @@
                         <td>{{$item['asalSekolah']}}</td>
                         <td>
                             <button class="inputNilaii btn btn-info btn-sm mr-2" data-id="{{$item['id']}}"
-                                data-toggle="modal" data-target="#modalFormInputNilai">Input Nilai</button>
+                                data-toggle="modal" data-target="#modalFormInputNilai1">Input Nilai</button>
                             <button class="lihatDataSiswa btn btn-secondary btn-sm mr-2" data-data="{{$item}}"
                                 data-toggle="modal" data-target="#modalFormlihatSiswa">Lihat</button>
                             <button class="editDataSiswa btn btn-warning btn-sm mr-2"
@@ -60,7 +63,7 @@
 </div>
 
 <!-- Modal form input-->
-<div class="modal fade" id="modalFormInputNilai" tabindex="-1" aria-labelledby="modalFormInputNilaiLabel"
+<div class="modal fade" id="modalFormInputNilai1" tabindex="-1" aria-labelledby="modalFormInputNilaiLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
@@ -187,11 +190,6 @@
                                     <input type="text" name="asalSekolahLihat" class="form-control"
                                         id="asalSekolahLihat">
                                 </div>
-                                <div class="form-group">
-                                    <label for="nomorIjazahLihat">Nomor Ijazah</label>
-                                    <input type="number" name="nomorIjazahLihat" class="form-control"
-                                        id="nomorIjazahLihat">
-                                </div>
                             </fieldset>
                         </div>
 
@@ -288,10 +286,6 @@
                                 <label for="asalSekolahEdit">Asal Sekolah</label>
                                 <input type="text" name="asalSekolahEdit" class="form-control" id="asalSekolahEdit">
                             </div>
-                            <div class="form-group">
-                                <label for="nomorIjazahEdit">Nomor Ijazah</label>
-                                <input type="number" name="nomorIjazahEdit" class="form-control" id="nomorIjazahEdit">
-                            </div>
                         </div>
                         <div class="col-6">
                             <div class="form-group">
@@ -373,7 +367,7 @@
                     success: function (response) {
                         alert('berhasil');
 
-                        $('#modalFormInputNilai').modal('hide');
+                        $('#modalFormInputNilai1').modal('hide');
 
                         $('#tabNilai').click();
                     },
@@ -404,7 +398,6 @@
         $('input[name=pekerjaanOrangTuaEdit]').val(siswa['pekerjaanOrangTua']);
         $('textarea[name=alamatOrangTuaEdit]').val(siswa['alamatOrangTua']);
         $('input[name=asalSekolahEdit]').val(siswa['asalSekolah']);
-        $('input[name=nomorIjazahEdit]').val(siswa['nomorIjazah']);
 
         $('#modalFormEditSiswa').modal('show');
 
@@ -481,7 +474,6 @@
         $('input[name=pekerjaanOrangTuaLihat]').val(siswa['pekerjaanOrangTua']);
         $('textarea[name=alamatOrangTuaLihat]').val(siswa['alamatOrangTua']);
         $('input[name=asalSekolahLihat]').val(siswa['asalSekolah']);
-        $('input[name=nomorIjazahLihat]').val(siswa['nomorIjazah']);
 
         $('#modalFormLihatSiswa').modal('show');
     })
