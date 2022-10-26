@@ -5,8 +5,6 @@
             <h1 class="text-center">Data Siswa</h1>
         </div>
     </div>
-
-
     <div class="row">
         <div class="col">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -69,7 +67,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalFormInputNilaiLabel">Form Input Nilai</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="close-modalFormInputNilai1" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -367,7 +365,7 @@
                     success: function (response) {
                         alert('berhasil');
 
-                        $('#modalFormInputNilai1').modal('hide');
+                        $('#close-modalFormInputNilai1').trigger('click');
 
                         $('#tabNilai').click();
                     },

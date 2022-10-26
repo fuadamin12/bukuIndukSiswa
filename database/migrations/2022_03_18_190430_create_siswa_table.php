@@ -25,7 +25,6 @@ class CreateSiswaTable extends Migration
             $table->text('alamatOrangTua');
             $table->string('pekerjaanOrangTua',25);
             $table->string('asalSekolah',50);
-            $table->string('nomorIjazah',25);
             $table->timestamps();
         });
     }
