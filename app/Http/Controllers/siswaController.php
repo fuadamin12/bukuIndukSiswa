@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use App\Models\siswa;
+use Dompdf\Dompdf;
+use App\Exports\siswaExport;
 
 class siswaController extends Controller
 {
@@ -72,4 +74,28 @@ class siswaController extends Controller
         $siswa->asalSekolah         = $asalSekolah;
         $siswa->save();
     }
+
+    public function siswaPdf()
+    {
+        $siswa = siswa::all(); 
+
+        $html = view('contents.siswaPdf',compact('siswa'));
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('legal', 'landscape');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
+    }
+
+    public function siswaExport()
+    {
+        return (new siswaExport)->download('siswa.xlsx');
+    }
 }
+

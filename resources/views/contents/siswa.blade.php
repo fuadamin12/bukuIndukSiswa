@@ -1,4 +1,5 @@
-<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+<link   href="css/bootstrap.min.css" rel="stylesheet" >
+<script src="js/bootstrap.bundle.min.js"></script>
 <div class="container">
     <div class="row">
         <div class="col">
@@ -14,7 +15,8 @@
                 </ol>
             </nav>
             <div class="d-flex flex-row-reverse bd-highlight">
-                <button type="button" class="btn btn-success btn-sm mr-2">Cetak Siswa</button>
+                <a href="siswa/pdf" class="btn btn-primary btn-sm mr-2  p-2 bd-highlight">Download Siswa PDF</a>&emsp;
+                <a href="siswa/excel" class="btn btn-success btn-sm mr-2  p-2 bd-highlight">Download Siswa Excel</a>
             </div>
             <table class="table table-hover" id="dataTables">
                 <thead>
@@ -36,7 +38,6 @@
                         <th scope="row">{{$i}}</th>
                         <td>{{$item['namaSiswa']}}</td>
                         <td>{{$item['nisn']}}</td>
-                        {{-- <td>{{date('d - m - Y', strtotime($item['tanggalLahir']))}}</td> --}}
                         <td>{{$item['jenisKelamin']}}</td>
                         <td>{{$item['alamat']}}</td>
                         <td>{{$item['asalSekolah']}}</td>
@@ -46,7 +47,7 @@
                             <button class="lihatDataSiswa btn btn-secondary btn-sm mr-2" data-data="{{$item}}"
                                 data-toggle="modal" data-target="#modalFormlihatSiswa">Lihat</button>
                             <button class="editDataSiswa btn btn-warning btn-sm mr-2"
-                                data-data="{{$item}}">Edit</button>
+                                data-data="{{$item}}">Edit</button><br>
                             <button class="hapusDataSiswa btn btn-danger btn-sm"
                                 data-id="{{$item['id']}}">Hapus</button>
                         </td>
@@ -67,7 +68,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalFormInputNilaiLabel">Form Input Nilai</h5>
-                <button type="button" class="close" id="close-modalFormInputNilai1" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="close-modalFormInputNilai1" data-dismiss="modal"
+                    aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -84,15 +86,10 @@
                                 <input class="form-control" list="datalistOptions" id="kelas" placeholder="Pilih Kelas"
                                     name="kelas">
                                 <datalist id="datalistOptions">
-                                    <option value="VII-1"></option>
-                                    <option value="VII-2"></option>
-                                    <option value="VIII-1"></option>
-                                    <option value="VIII-2"></option>
-                                    <option value="IX-1"></option>
-                                    <option value="IX-2"></option>
+                                    <option value="VII"></option>
+                                    <option value="VIII"></option>
+                                    <option value="IX"></option>
                                 </datalist>
-
-                                {{-- <input type="text" name="kelas" class="form-control" id="kelas"> --}}
                             </div>
 
                             <div class="form-group">
@@ -103,14 +100,6 @@
                                     <option value="1">
                                     <option value="2">
                                 </datalist>
-                                {{-- <div class="input-group">
-                                    <select class="form-select" id="semester" aria-label="Example select with button addon">
-                                      <option selected>Pilih Semester</option>
-                                      <option value="1">I</option>
-                                      <option value="2">II</option>
-                                    </select>
-                                </div> --}}
-                                {{-- <input type="text" name="semester" class="form-control" id="semester"> --}}
                             </div>
 
                         </div>
@@ -124,9 +113,9 @@
                                 <datalist id="datalistOptions2">
                                     <option value="PKN">
                                     <option value="IPA">
+                                    <option value="IPS">
                                     <option value="Matematika">
                                 </datalist>
-                                {{-- <input type="text" name="mataPelajaran" class="form-control" id="mataPelajaran"> --}}
                             </div>
 
                             <div class="form-group">

@@ -1,5 +1,10 @@
-<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+{{-- <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+<link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
 
+    <link   href="css/bootstrap.min.css" rel="stylesheet" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
 <div class="container">
     <div class="row">
         <div class="col">
@@ -15,7 +20,8 @@
                 </ol>
             </nav>
             <div class="d-flex flex-row-reverse bd-highlight">
-                <button type="button" class="btn btn-success btn-sm mr-2">Cetak Nilai</button>
+                <a href="nilai/pdf" class="btn btn-primary btn-sm mr-2  p-2 bd-highlight">Download Nilai PDF</a>&emsp;
+                <a href="nilai/excel" class="btn btn-success btn-sm mr-2  p-2 bd-highlight" >Download Nilai Excel</a>
             </div>
             <table class="table table-hover" id="dataTables">
                 <thead>
@@ -44,9 +50,10 @@
                         <td>{{$item['nilai']}}</td>
                         <td>{{$item['mataPelajaran']}}</td>
                         <td>{{$item['semester']}}</td>
-                        <td><button class="editDataSiswa btn btn-warning btn-sm mr-2"
-                                data-data="{{$item}}">Edit</button><button class="hapusDataNilai btn btn-danger btn-sm"
-                                data-id="{{$item['id']}}">Hapus</button></td>
+                        <td>
+                            <button class="editDataSiswa btn btn-warning btn-sm mr-2" data-data="{{$item}}">Edit</button>&emsp;
+                            <button class="hapusDataNilai btn btn-danger btn-sm" data-id="{{$item['id']}}">Hapus</button>
+                        </td>
                     </tr>
                     <?php $i++;?>
                     @endif
@@ -66,8 +73,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalFormEditNilaiLabel">Form Edit Nilai</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
             <div class="modal-body">
@@ -84,14 +91,10 @@
                                 <input class="form-control" list="datalistOptions" id="kelas" placeholder="Pilih Kelas"
                                     name="kelasUbah">
                                 <datalist id="datalistOptions">
-                                    <option value="VII-1"></option>
-                                    <option value="VII-2"></option>
-                                    <option value="VIII-1"></option>
-                                    <option value="VIII-2"></option>
-                                    <option value="IX-1"></option>
-                                    <option value="IX-2"></option>
+                                    <option value="VII"></option>
+                                    <option value="VIII"></option>
+                                    <option value="IX"></option>
                                 </datalist>
-                                {{-- <input type="text" name="kelasUbah" class="form-control" id="kelas"> --}}
                             </div>
 
                             <div class="form-group">
@@ -102,7 +105,6 @@
                                     <option value="1">
                                     <option value="2">
                                 </datalist>
-                                {{-- <input type="text" name="semesterUbah" class="form-control" id="semester"> --}}
                             </div>
 
                         </div>
@@ -114,11 +116,11 @@
                                 <input class="form-control" list="datalistOptions2" id="mataPelajaran"
                                     placeholder="Pilih Mata Pelajaran" name="mataPelajaranUbah">
                                 <datalist id="datalistOptions2">
-                                    <option value="PKN">
-                                    <option value="IPA">
-                                    <option value="Matematika">
+                                        <option value="IPA">
+                                        <option value="IPS">
+                                        <option value="Matematika">
+                                    </datalist>
                                 </datalist>
-                                {{-- <input type="text" name="mataPelajaranUbah" class="form-control" id="mataPelajaran"> --}}
                             </div>
 
                             <div class="form-group">

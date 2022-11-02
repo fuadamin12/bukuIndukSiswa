@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
 use App\Models\nilai;
+use App\Models\siswa;
+use Dompdf\Dompdf;
+use App\Exports\nilaiExport;
+
 
 class nilaiController extends Controller
 {
@@ -35,5 +39,29 @@ class nilaiController extends Controller
     public function hapusNilai(Request $request)
     {
         nilai::find($request->id)->delete();
+    }
+    
+    public function nilaiPdf()
+    {
+        $nilai = nilai::all();
+        $siswa = siswa::leftJoin('nilai', 'nilai.siswa_id', '=', 'siswa.id')->get();
+
+        $html = view('contents.nilaiPdf',compact('nilai','siswa'));
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation
+        $dompdf->setPaper('A5', 'Portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser
+        $dompdf->stream();
+    }
+
+    public function nilaiExport()
+    {
+        return (new nilaiExport)->download('nilai.xlsx');
     }
 }

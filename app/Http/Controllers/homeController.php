@@ -58,4 +58,10 @@ class homeController extends Controller
        
         return view('contents.nilai',compact('nilai','siswa'));
     }
+
+    public function tampilCetak()
+    {
+        $siswa = siswa::all(); 
+        return view('contents.cetak',compact('siswa'));
+    }
 }

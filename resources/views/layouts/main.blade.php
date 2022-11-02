@@ -7,18 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     {{-- jquery --}}
-    <script src="/js/jquery-3.6.0.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
     {{--dataTables  --}}
+    {{-- <script type="text/javascript" src="DataTables/datatables.min.js"></script> --}}
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+ 
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
     {{-- Chart --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> --}}
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>SMP Negeri 5 Padangsidimpuan</title>
 </head>
 
@@ -32,11 +37,10 @@
                     <h1 class="navbar-brand" style="color: #00AEEF">| SISTEM INFORMASI BUKU INDUK SISWA </h1>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                     </button>
                 </nav>
             </div>
-
         </div>
         <div class="row">
             <div class="col-2">
@@ -97,7 +101,7 @@
                             </clipPath>
                         </defs>
                     </svg> Nilai</a>
-                <a href="#" id="tabSiswa" class="list-group-item list-group-item-action" aria-current="true">
+                <a href="#" id="tabCetak" class="list-group-item list-group-item-action" aria-current="true">
                     <svg width="35" height="35" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.4" d="M14 11.25V0.75C14 0.334375 13.6656 0 13.25 0H3C1.34375 0 0 1.34375 0 3V13C0 14.6562 1.34375 16 3 16H13.25C13.6656 16 14 15.6656 14 15.25V14.75C14 14.5156 13.8906 14.3031 13.7219 14.1656C13.5906 13.6844 13.5906 12.3125 13.7219 11.8313C13.8906 11.6969 14 11.4844 14 11.25ZM4 4.1875C4 4.08438 4.08438 4 4.1875 4H10.8125C10.9156 4 11 4.08438 11 4.1875V4.8125C11 4.91562 10.9156 5 10.8125 5H4.1875C4.08438 5 4 4.91562 4 4.8125V4.1875ZM4 6.1875C4 6.08438 4.08438 6 4.1875 6H10.8125C10.9156 6 11 6.08438 11 6.1875V6.8125C11 6.91562 10.9156 7 10.8125 7H4.1875C4.08438 7 4 6.91562 4 6.8125V6.1875ZM11.9187 14H3C2.44687 14 2 13.5531 2 13C2 12.45 2.45 12 3 12H11.9187C11.8594 12.5344 11.8594 13.4656 11.9187 14Z" fill="#9FA2B4"/>
                         </svg>
@@ -110,19 +114,17 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-    </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
 
     <!-- Modal form input-->
-    <div class="modal fade" id="modalFormInputSiswa" tabindex="-1" aria-labelledby="modalFormInputSiswaLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="modalFormInputSiswa" tabindex="-1" aria-labelledby="modalFormInputSiswaLabel">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalFormInputSiswaLabel">Pendaftaran Baru</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+                        <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -150,8 +152,6 @@
                                     <label for="asalSekolah">Asal Sekolah</label>
                                     <input type="text" name="asalSekolah" class="form-control" id="asalSekolah">
                                 </div>
-                            </div>
-                            <div class="col-6">
                                 <div class="form-group">
                                     <label for="">Jenis Kelamin</label>
                                     <div class="col-sm-10">
@@ -171,6 +171,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-6">
 
                                 <div class="form-group">
                                     <label for="alamat">Alamat Siswa</label>
@@ -195,7 +197,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <button type="button" id="submitFormInputSiswa" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
@@ -237,6 +238,12 @@
         })
     })
 
+    // buka side tab cetak
+    $('#tabCetak').on('click', function () {
+        $.get("{{ route('tabCetak') }}", function (data) {
+            $("#isiUtama").html(data);
+        })
+    })  
 
     // store data Input Siswa
     $('#submitFormInputSiswa').on('click', function () {

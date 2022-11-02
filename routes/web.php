@@ -34,14 +34,32 @@ Route::get('/login', [loginController::class, 'index']);
     // route edit data siswa
     Route::post('/siswa/edit','siswaController@editSiswa')->name('editSiswa');
 
+    // route Download Siswa PDF
+    Route::get('/siswa/pdf','siswaController@siswaPdf')->name('siswaPdf');
+    
+    // route Download Siswa Excel
+    Route::get('/siswa/excel','siswaController@siswaExport')->name('siswaExport');
+
 // route tab nilai
     Route::get('/nilai','homeController@tampilNilai')->name('tabNilai');
 
     // route store data input nilai
     Route::post('/nilai/input','nilaiController@tambahNilai')->name('tambahNilai');
     
-    // route Edit data input nilai
+    // route edit data input nilai
     Route::post('/nilai/edit','nilaiController@EditNilai')->name('editNilai');
     
-    // route Hapus data input nilai
+    // route hapus data input nilai
     Route::post('/nilai/hapus','nilaiController@hapusNilai')->name('hapusNilai');
+
+    // route Download Nilai PDF
+    Route::get('/nilai/pdf','nilaiController@nilaiPdf')->name('nilaiPdf');
+
+    // route Download Nilai Excel
+    Route::get('/nilai/excel','nilaiController@nilaiExport')->name('nilaiExport');
+    
+// route tab cetak    
+    Route::get('/cetak','homeController@tampilCetak')->name('tabCetak');   
+    
+
+

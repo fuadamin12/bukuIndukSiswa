@@ -9,6 +9,9 @@ class siswa extends Model
     protected $table = 'siswa';
 
     protected $casts = [
-        'tanggalLahir'  => 'date:Y-m-d',
+        'tanggalLahir'  => 'date:d-m-Y',
+    ];
+    protected $hidden = [
+        'created_at','updated_at',
     ];
 }
