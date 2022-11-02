@@ -40,7 +40,7 @@ class nilaiController extends Controller
     {
         nilai::find($request->id)->delete();
     }
-    
+
     public function nilaiPdf()
     {
         $nilai = nilai::all();

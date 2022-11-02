@@ -19,12 +19,17 @@ class nilaiExport implements FromCollection,ShouldAutoSize, WithHeadings, WithEv
 
     public function collection()
     {
-        return nilai::all();
+        return nilai::
+
+        join('siswa','nilai.siswa_id','=','siswa.id')
+        ->select('nilai.id','siswa.namaSiswa','siswa.nisn','nilai.kelas',
+        'nilai.semester','nilai.mataPelajaran','nilai.nilai')
+        ->get();
     }
     public function headings(): array
     {
             return [
-                ['No','Nama Siswa','Kelas','Semester','Mata Pelajaran','Nilai']
+                ['No','Nama Siswa','NISN','Kelas','Semester','Mata Pelajaran','Nilai']
             ];
     }
     public function registerEvents(): array
