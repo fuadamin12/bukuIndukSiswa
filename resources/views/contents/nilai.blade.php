@@ -1,9 +1,5 @@
-{{-- <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
-<link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
-
-    <link   href="css/bootstrap.min.css" rel="stylesheet" >
-    <script src="js/bootstrap.bundle.min.js"></script>
+<link   href="css/bootstrap.min.css" rel="stylesheet" >
+<script src="js/bootstrap.bundle.min.js"></script>
     
 <div class="container">
     <div class="row">

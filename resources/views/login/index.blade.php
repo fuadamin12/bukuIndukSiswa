@@ -1,8 +1,8 @@
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
 </head>
 
 <body>

@@ -9,10 +9,8 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithEvents;
 use Maatwebsite\Excel\Events\AfterSheet;
 use Maatwebsite\Excel\Concerns\FromQuery;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 use Maatwebsite\Excel\Concerns\WithColumnFormatting;
-use Maatwebsite\Excel\Concerns\WithMapping;
 
 class siswaExport implements ShouldAutoSize, WithHeadings, WithEvents,FromQuery,WithColumnFormatting
 {
@@ -46,7 +44,7 @@ class siswaExport implements ShouldAutoSize, WithHeadings, WithEvents,FromQuery,
     public function columnFormats(): array
     {
         return [
-            'C' => NumberFormat::FORMAT_NUMBER
+            'C' => NumberFormat::FORMAT_NUMBER,
         ];
     }
 

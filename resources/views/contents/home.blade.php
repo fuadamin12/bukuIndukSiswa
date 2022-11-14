@@ -1,10 +1,8 @@
-<link   href="css/bootstrap.min.css" rel="stylesheet" >
+<link   href="css/bootstrap.min.css"      rel="stylesheet" >
+<link   href="css/font-awesome.css"       rel="stylesheet" />
+<link   href="css/morris-0.4.3.min.css"   rel="stylesheet" />
+<link   href="css/custom-styles.css"      rel="stylesheet" />
 <script src="js/bootstrap.bundle.min.js"></script>
-
-
-    <link href="css/font-awesome.css" rel="stylesheet" />
-    <link href="css/morris-0.4.3.min.css" rel="stylesheet" />
-    <link href="css/custom-styles.css" rel="stylesheet" />
 
 <div class="container">
     

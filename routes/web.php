@@ -59,7 +59,16 @@ Route::get('/login', [loginController::class, 'index']);
     Route::get('/nilai/excel','nilaiController@nilaiExport')->name('nilaiExport');
     
 // route tab cetak    
-    Route::get('/cetak','homeController@tampilCetak')->name('tabCetak');   
+    Route::get('/cetak','homeController@tampilCetak')->name('tabCetak');
     
+//  route kelas VII
+    Route::get('/nilai/vii','homeController@vii')->name('vii');
+    
+//  route kelas VIII
+    Route::get('/nilai/viii','homeController@viii')->name('viii');
 
+//  route kelas IX
+    Route::get('/nilai/ix','homeController@ix')->name('ix');
 
+//  route Data Master
+    Route::get('/dataMaster','homeController@dataMaster')->name('dataMaster');

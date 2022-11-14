@@ -11,6 +11,7 @@ use App\Models\nilai;
 
 class homeController extends Controller
 {
+
     public function index(Request $request)
     {
         return view('layouts.main');
@@ -62,6 +63,59 @@ class homeController extends Controller
     public function tampilCetak()
     {
         $siswa = siswa::all(); 
-        return view('contents.cetak',compact('siswa'));
+        $nilai = nilai::all();
+        return view('contents.cetak',compact('siswa','nilai'));
+    }
+
+    public function vii()
+    {
+        $nilai = nilai::join('siswa','nilai.siswa_id','=','siswa.id')
+        ->select('nilai.id','siswa.namaSiswa','siswa.nisn','nilai.kelas',
+        'nilai.semester','nilai.mataPelajaran','nilai.nilai')
+        ->where('kelas','vii')
+        ->orderBy('namaSiswa', 'asc')
+        ->get();
+        $siswa = siswa::leftJoin('nilai', 'nilai.siswa_id', '=', 'siswa.id')
+        ->get();
+
+        return view('contents.kelasVii',compact('nilai','siswa'));
+    }
+    
+    public function viii()
+    {
+        $nilai = nilai::join('siswa','nilai.siswa_id','=','siswa.id')
+        ->select('nilai.id','siswa.namaSiswa','siswa.nisn','nilai.kelas',
+        'nilai.semester','nilai.mataPelajaran','nilai.nilai')
+        ->where('kelas','viii')
+        ->orderBy('namaSiswa', 'asc')
+        ->get();
+        $siswa = siswa::leftJoin('nilai', 'nilai.siswa_id', '=', 'siswa.id')
+        ->get();
+
+        return view('contents.kelasViii',compact('nilai','siswa'));
+    }
+
+    public function ix()
+    {
+        $nilai = nilai::join('siswa','nilai.siswa_id','=','siswa.id')
+        ->select('nilai.id','siswa.namaSiswa','siswa.nisn','nilai.kelas',
+        'nilai.semester','nilai.mataPelajaran','nilai.nilai')
+        ->where('kelas','ix')
+        ->orderBy('namaSiswa', 'asc')
+        ->get();
+        $siswa = siswa::leftJoin('nilai', 'nilai.siswa_id', '=', 'siswa.id')
+        ->get();
+
+        return view('contents.kelasIx',compact('nilai','siswa'));
+    }
+
+    public function dataMaster()
+    {
+        $nilai = nilai::all();
+        $siswa = siswa::leftJoin('nilai', 'nilai.siswa_id', '=', 'siswa.id')
+        ->orderBy('namaSiswa', 'asc')
+        ->get();
+       
+        return view('contents.dataMaster',compact('nilai','siswa'));
     }
 }

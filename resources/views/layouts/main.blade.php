@@ -8,22 +8,18 @@
 
     {{-- jquery --}}
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    
+
     {{--dataTables  --}}
-    {{-- <script type="text/javascript" src="DataTables/datatables.min.js"></script> --}}
-    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
- 
+    <link   rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
     {{-- Chart --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Bootstrap CSS -->
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> --}}
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link   href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <title>SMP Negeri 5 Padangsidimpuan</title>
 </head>
 
@@ -37,7 +33,7 @@
                     <h1 class="navbar-brand" style="color: #00AEEF">| SISTEM INFORMASI BUKU INDUK SISWA </h1>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
                 </nav>
             </div>
@@ -93,7 +89,9 @@
                 <a href="#" id="tabNilai" class="list-group-item list-group-item-action">
                     <svg width="35" height="35" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_29_13)">
-                            <path opacity="0.4"d="M5.50187 14.1985C5.50219 14.395 5.56031 14.5875 5.66937 14.7513L6.20344 15.5541C6.29467 15.6913 6.41841 15.8039 6.56366 15.8817C6.7089 15.9596 6.87114 16.0003 7.03594 16.0003H8.96438C9.12917 16.0003 9.29141 15.9596 9.43665 15.8817C9.5819 15.8039 9.70564 15.6913 9.79688 15.5541L10.3309 14.7513C10.44 14.5875 10.4982 14.3952 10.4984 14.1985L10.4997 13H5.50031L5.50187 14.1985ZM2.5 5.50003C2.5 6.88659 3.01406 8.15159 3.86125 9.11815C4.3775 9.70721 5.185 10.9378 5.49281 11.976C5.49406 11.9841 5.495 11.9922 5.49625 12.0003H10.5037C10.505 11.9922 10.5059 11.9844 10.5072 11.976C10.815 10.9378 11.6225 9.70721 12.1388 9.11815C12.9859 8.15159 13.5 6.88659 13.5 5.50003C13.5 2.45659 11.0284 -0.00934836 7.98281 2.66431e-05C4.795 0.00971414 2.5 2.59284 2.5 5.50003ZM8 3.00003C6.62156 3.00003 5.5 4.12159 5.5 5.50003C5.5 5.77628 5.27625 6.00003 5 6.00003C4.72375 6.00003 4.5 5.77628 4.5 5.50003C4.5 3.57003 6.07 2.00003 8 2.00003C8.27625 2.00003 8.5 2.22378 8.5 2.50003C8.5 2.77628 8.27625 3.00003 8 3.00003Z" fill="#9FA2B4" />
+                            <path opacity="0.4"
+                                d="M5.50187 14.1985C5.50219 14.395 5.56031 14.5875 5.66937 14.7513L6.20344 15.5541C6.29467 15.6913 6.41841 15.8039 6.56366 15.8817C6.7089 15.9596 6.87114 16.0003 7.03594 16.0003H8.96438C9.12917 16.0003 9.29141 15.9596 9.43665 15.8817C9.5819 15.8039 9.70564 15.6913 9.79688 15.5541L10.3309 14.7513C10.44 14.5875 10.4982 14.3952 10.4984 14.1985L10.4997 13H5.50031L5.50187 14.1985ZM2.5 5.50003C2.5 6.88659 3.01406 8.15159 3.86125 9.11815C4.3775 9.70721 5.185 10.9378 5.49281 11.976C5.49406 11.9841 5.495 11.9922 5.49625 12.0003H10.5037C10.505 11.9922 10.5059 11.9844 10.5072 11.976C10.815 10.9378 11.6225 9.70721 12.1388 9.11815C12.9859 8.15159 13.5 6.88659 13.5 5.50003C13.5 2.45659 11.0284 -0.00934836 7.98281 2.66431e-05C4.795 0.00971414 2.5 2.59284 2.5 5.50003ZM8 3.00003C6.62156 3.00003 5.5 4.12159 5.5 5.50003C5.5 5.77628 5.27625 6.00003 5 6.00003C4.72375 6.00003 4.5 5.77628 4.5 5.50003C4.5 3.57003 6.07 2.00003 8 2.00003C8.27625 2.00003 8.5 2.22378 8.5 2.50003C8.5 2.77628 8.27625 3.00003 8 3.00003Z"
+                                fill="#9FA2B4" />
                         </g>
                         <defs>
                             <clipPath id="clip0_29_13">
@@ -103,9 +101,11 @@
                     </svg> Nilai</a>
                 <a href="#" id="tabCetak" class="list-group-item list-group-item-action" aria-current="true">
                     <svg width="35" height="35" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.4" d="M14 11.25V0.75C14 0.334375 13.6656 0 13.25 0H3C1.34375 0 0 1.34375 0 3V13C0 14.6562 1.34375 16 3 16H13.25C13.6656 16 14 15.6656 14 15.25V14.75C14 14.5156 13.8906 14.3031 13.7219 14.1656C13.5906 13.6844 13.5906 12.3125 13.7219 11.8313C13.8906 11.6969 14 11.4844 14 11.25ZM4 4.1875C4 4.08438 4.08438 4 4.1875 4H10.8125C10.9156 4 11 4.08438 11 4.1875V4.8125C11 4.91562 10.9156 5 10.8125 5H4.1875C4.08438 5 4 4.91562 4 4.8125V4.1875ZM4 6.1875C4 6.08438 4.08438 6 4.1875 6H10.8125C10.9156 6 11 6.08438 11 6.1875V6.8125C11 6.91562 10.9156 7 10.8125 7H4.1875C4.08438 7 4 6.91562 4 6.8125V6.1875ZM11.9187 14H3C2.44687 14 2 13.5531 2 13C2 12.45 2.45 12 3 12H11.9187C11.8594 12.5344 11.8594 13.4656 11.9187 14Z" fill="#9FA2B4"/>
-                        </svg>
-                        Cetak</a>    
+                        <path opacity="0.4"
+                            d="M14 11.25V0.75C14 0.334375 13.6656 0 13.25 0H3C1.34375 0 0 1.34375 0 3V13C0 14.6562 1.34375 16 3 16H13.25C13.6656 16 14 15.6656 14 15.25V14.75C14 14.5156 13.8906 14.3031 13.7219 14.1656C13.5906 13.6844 13.5906 12.3125 13.7219 11.8313C13.8906 11.6969 14 11.4844 14 11.25ZM4 4.1875C4 4.08438 4.08438 4 4.1875 4H10.8125C10.9156 4 11 4.08438 11 4.1875V4.8125C11 4.91562 10.9156 5 10.8125 5H4.1875C4.08438 5 4 4.91562 4 4.8125V4.1875ZM4 6.1875C4 6.08438 4.08438 6 4.1875 6H10.8125C10.9156 6 11 6.08438 11 6.1875V6.8125C11 6.91562 10.9156 7 10.8125 7H4.1875C4.08438 7 4 6.91562 4 6.8125V6.1875ZM11.9187 14H3C2.44687 14 2 13.5531 2 13C2 12.45 2.45 12 3 12H11.9187C11.8594 12.5344 11.8594 13.4656 11.9187 14Z"
+                            fill="#9FA2B4" />
+                    </svg>
+                    Cetak</a>
             </div>
             <div class="col-10">
                 <div id="isiUtama" style="background: rgba(0, 181, 255, 0.05)"></div>
@@ -123,8 +123,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalFormInputSiswaLabel">Pendaftaran Baru</h5>
-                        <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
-                        <span aria-hidden="true"></span>
+                    <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
+                    <span aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -243,7 +243,7 @@
         $.get("{{ route('tabCetak') }}", function (data) {
             $("#isiUtama").html(data);
         })
-    })  
+    })
 
     // store data Input Siswa
     $('#submitFormInputSiswa').on('click', function () {
